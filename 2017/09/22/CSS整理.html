@@ -30,9 +30,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="css,笔记">
+    <meta name="keywords" content="笔记,css">
     <meta name="description" content="#  ~选择器：查找某一个元素后面的所有兄弟元素例如     .test~.name{background:red} +选择器：查找某一个元素后面紧邻的兄弟元素例如     .test+.name{background:red} 用 font-size ：0 来清除边距不要忘记给子元素设置字号 用overflow清除浮动.clearfix{   overflow：hidden      } .cl">
-<meta name="keywords" content="css,笔记">
+<meta name="keywords" content="笔记,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css 笔记整理">
 <meta property="og:url" content="https://jiaopianjun.cc/2017/09/22/CSS整理.html">
@@ -147,11 +147,12 @@
 </aside>
 
     <main id="main">
-        <header class="top-header" id="header">
+            <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
+        <span id="jinrishici-sentence" style="line-height:57px;">正在加载今日诗词....</span>
         <div class="flex-col header-title ellipsis">css 笔记整理</div>
         
         <div class="search-wrap" id="search-wrap">
@@ -172,7 +173,6 @@
     </div>
 </header>
 <header class="content-header post-header">
-
     <div class="container fade-scale">
         <h1 class="title">css 笔记整理</h1>
         <h5 class="subtitle">
@@ -712,6 +712,7 @@
 
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 

@@ -30,9 +30,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="css,javascript,html">
+    <meta name="keywords" content="javascript,css,html">
     <meta name="description" content="HTML&amp;amp;CSS  对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox   JavaScript：  数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、EC">
-<meta name="keywords" content="css,javascript,html">
+<meta name="keywords" content="javascript,css,html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端开发知识点">
 <meta property="og:url" content="https://jiaopianjun.cc/2018/06/10/前端开发知识点.html">
@@ -147,11 +147,12 @@
 </aside>
 
     <main id="main">
-        <header class="top-header" id="header">
+            <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
+        <span id="jinrishici-sentence" style="line-height:57px;">正在加载今日诗词....</span>
         <div class="flex-col header-title ellipsis">前端开发知识点</div>
         
         <div class="search-wrap" id="search-wrap">
@@ -172,7 +173,6 @@
     </div>
 </header>
 <header class="content-header post-header">
-
     <div class="container fade-scale">
         <h1 class="title">前端开发知识点</h1>
         <h5 class="subtitle">
@@ -1612,6 +1612,7 @@ HTML&amp;CSS
 
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 

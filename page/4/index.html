@@ -146,11 +146,12 @@
 </aside>
 
     <main id="main">
-        <header class="top-header" id="header">
+            <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
+        <span id="jinrishici-sentence" style="line-height:57px;">正在加载今日诗词....</span>
         <div class="flex-col header-title ellipsis">故事胶片</div>
         
         <div class="search-wrap" id="search-wrap">
@@ -171,7 +172,6 @@
     </div>
 </header>
 <header class="content-header index-header">
-
     <div class="container fade-scale">
         <h1 class="title">故事胶片</h1>
         <h5 class="subtitle">
@@ -382,7 +382,7 @@
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-前端性能优化"
+            <article id="post-浏览器本地存储"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -400,7 +400,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/前端性能优化.html">前端性能优化</a>
+      <a class="post-title-link" href="/2018/06/11/浏览器本地存储.html">浏览器本地存储</a>
     </h3>
   
 
@@ -410,18 +410,16 @@
     <div class="post-content clearfix" id="post-content" itemprop="postContent">
 
     
-        如何进行网站性能优化
+        浏览器本地存储
 
-content方面
-减少HTTP请求：合并文件、CSS精灵、inline Image
-减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询
-避免重定向：多余的中间访问
-
-
+在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage
+html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage
+sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储
+而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
 
     
 
-        <a href="/2018/06/11/前端性能优化.html" class="post-more waves-effect waves-button">
+        <a href="/2018/06/11/浏览器本地存储.html" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
     </div>
@@ -545,6 +543,61 @@ AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 在后台与服�
         </li>
     
         <li class="post-list-item fade">
+            <article id="post-前端性能优化"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-11 18:02:27" datetime="2018-06-11T10:02:27.000Z"  itemprop="datePublished">2018-06-11</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Coding/">Coding</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/11/前端性能优化.html">前端性能优化</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content clearfix" id="post-content" itemprop="postContent">
+
+    
+        如何进行网站性能优化
+
+content方面
+减少HTTP请求：合并文件、CSS精灵、inline Image
+减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询
+避免重定向：多余的中间访问
+
+
+
+    
+
+        <a href="/2018/06/11/前端性能优化.html" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-Vue基础知识"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -584,59 +637,6 @@ AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 在后台与服�
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-浏览器本地存储"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-11 18:02:27" datetime="2018-06-11T10:02:27.000Z"  itemprop="datePublished">2018-06-11</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Coding/">Coding</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/浏览器本地存储.html">浏览器本地存储</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content clearfix" id="post-content" itemprop="postContent">
-
-    
-        浏览器本地存储
-
-在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage
-html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage
-sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储
-而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
-
-    
-
-        <a href="/2018/06/11/浏览器本地存储.html" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
 
     </div>
     
@@ -790,6 +790,7 @@ xhtml  必须有闭合标签，必须字母为小写，必须要有根元素
 
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
