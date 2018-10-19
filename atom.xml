@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaopianjun.cc/"/>
-  <updated>2018-10-10T06:29:55.412Z</updated>
+  <updated>2018-10-19T08:33:23.247Z</updated>
   <id>https://jiaopianjun.cc/</id>
   
   <author>
@@ -17,20 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试</title>
+    <title>js中的各种width，height</title>
     <link href="https://jiaopianjun.cc/2018/10/10/sagd.html"/>
     <id>https://jiaopianjun.cc/2018/10/10/sagd.html</id>
     <published>2018-10-10T06:28:12.000Z</published>
-    <updated>2018-10-10T06:29:55.412Z</updated>
+    <updated>2018-10-19T08:33:23.247Z</updated>
     
-    <content type="html"><![CDATA[<p>asdg</p>]]></content>
+    <content type="html"><![CDATA[<h6 id="默认系列"><a href="#默认系列" class="headerlink" title="默认系列"></a>默认系列</h6><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">offsetWidth      <span class="comment">//返回元素的宽度（包括元素宽度、内边距和边框，不包括外边距）</span></span><br><span class="line">offsetHeight     <span class="comment">//返回元素的高度（包括元素高度、内边距和边框，不包括外边距）</span></span><br><span class="line">clientWidth      <span class="comment">//返回元素的宽度（包括元素宽度、内边距，不包括边框和外边距）</span></span><br><span class="line">clientHeight     <span class="comment">//返回元素的高度（包括元素高度、内边距，不包括边框和外边距）</span></span><br><span class="line">style.width      <span class="comment">//返回元素的宽度（包括元素宽度，不包括内边距、边框和外边距）</span></span><br><span class="line">style.height     <span class="comment">//返回元素的高度（包括元素高度，不包括内边距、边框和外边距）</span></span><br><span class="line">scrollWidth      </span><br><span class="line"><span class="comment">//返回元素的宽度（包括元素宽度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientWidth相同</span></span><br><span class="line">scrollHeigh      </span><br><span class="line"><span class="comment">//返回元素的高度（包括元素高度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientHeight相同</span></span><br><span class="line">```  </span><br><span class="line">###### 垂直滚动</span><br><span class="line">```  </span><br><span class="line">offsetTop</span><br><span class="line"><span class="comment">// 返回元素的上外缘距离最近采用定位父元素内壁的距离，如果父元素中没有采用定位的，则是获取上外边缘距离文档内壁的距离。所谓的定位就是position属性值为relative、absolute或者fixed。返回值是一个整数，单位是像素。此属性是只读的。</span></span><br><span class="line">offsetLeft   </span><br><span class="line"><span class="comment">//此属性和offsetTop的原理是一样的，只不过方位不同，这里就不多介绍了。</span></span><br><span class="line">scrollLeft   </span><br><span class="line"><span class="comment">//此属性可以获取或者设置对象的最左边到对象在当前窗口显示的范围内的左边的距离，也就是元素被滚动条向左拉动的距离。返回值是一个整数，单位是像素。此属性是可读写的。</span></span><br><span class="line">scrollTop    </span><br><span class="line"><span class="comment">//此属性可以获取或者设置对象的最顶部到对象在当前窗口显示的范围内的顶边的距离，也就是元素滚动条被向下拉动的距离。返回值是一个整数，单位是像素。此属性是可读写的。</span></span><br><span class="line">```                  </span><br><span class="line">###### 当鼠标事件发生时（不管是onclick，还是omousemove，onmouseover等）</span><br></pre></td></tr></table></figure><p>clientX      鼠标相对于浏览器（这里说的是浏览器的有效区域）左上角x轴的坐标；不随滚动条滚动而改变；<br>clientY      鼠标相对于浏览器（这里说的是浏览器的有效区域）左上角y轴的坐标；不随滚动条滚动而改变；<br>pageX        鼠标相对于浏览器（这里说的是浏览器的有效区域）左上角x轴的坐标；随滚动条滚动而改变；<br>pageY        鼠标相对于浏览器（这里说的是浏览器的有效区域）左上角y轴的坐标；随滚动条滚动而改变；<br>screenX      鼠标相对于显示器屏幕左上角x轴的坐标；<br>screenY      鼠标相对于显示器屏幕左上角y轴的坐标；<br>offsetX      鼠标相对于事件源左上角X轴的坐标<br>offsetY      鼠标相对于事件源左上角Y轴的坐标<br><code>`</code></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;asdg&lt;/p&gt;
-
+        &lt;h6 id=&quot;默认系列&quot;&gt;&lt;a href=&quot;#默认系列&quot; class=&quot;headerlink&quot; title=&quot;默认系列&quot;&gt;&lt;/a&gt;默认系列&lt;/h6&gt;&lt;figure class=&quot;highlight clean&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
       
     
     </summary>
