@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaopianjun.cc/"/>
-  <updated>2018-10-23T08:46:57.576Z</updated>
+  <updated>2018-10-23T09:32:50.760Z</updated>
   <id>https://jiaopianjun.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>history对象和HTML5 History API</title>
+    <link href="https://jiaopianjun.cc/2018/10/23/history%E5%AF%B9%E8%B1%A1%E5%92%8CHTML5-History-API.html"/>
+    <id>https://jiaopianjun.cc/2018/10/23/history对象和HTML5-History-API.html</id>
+    <published>2018-10-23T09:32:00.000Z</published>
+    <updated>2018-10-23T09:32:50.760Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="history对象和HTML5-History-API"><a href="#history对象和HTML5-History-API" class="headerlink" title="history对象和HTML5 History API"></a>history对象和HTML5 History API</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">history</span>.back<span class="params">()</span>     <span class="string">//</span> 返回上一个访问的页面，等同于浏览器的返回按钮</span><br><span class="line"><span class="keyword">history</span>.forward<span class="params">()</span>  <span class="string">//</span> 移动到下一个访问页面，等同于浏览器的前进按钮</span><br><span class="line"><span class="keyword">history</span>.go<span class="params">()</span>       <span class="string">//</span> 参数为一个整数</span><br><span class="line"><span class="keyword">history</span>.go<span class="params">(-1)</span>     <span class="string">//</span> 等同于 <span class="keyword">history</span>.back<span class="params">()</span></span><br><span class="line"><span class="keyword">history</span>.go<span class="params">(1)</span>      <span class="string">//</span> 等同于 <span class="keyword">history</span>.forward<span class="params">()</span></span><br><span class="line"><span class="keyword">history</span>.go<span class="params">(0)</span>      <span class="string">//</span> 等同于刷新当前页面</span><br></pre></td></tr></table></figure><h4 id="增加的属性"><a href="#增加的属性" class="headerlink" title="增加的属性"></a>增加的属性</h4><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、History.<span class="keyword">state</span>() 返回一个表示历史堆栈顶部的状态的值，只是一种可以不必等待 popstate事件查看状态的方式。</span><br><span class="line"><span class="number">2</span>、History.scrollRestortion()：允许Web应用程序在历史导航上显示地设置默认滚动恢复行为。此属性可以是自动的（auto），或者手动的（manual）</span><br></pre></td></tr></table></figure><h4 id="增加的方法"><a href="#增加的方法" class="headerlink" title="增加的方法"></a>增加的方法</h4><p>1、History.pushState()：按指定的名称和URL(如果提供该参数)，将数据push进会话历史栈，数据被DOM进行不透明处理，你可以指定任何可以被序列化的js对象。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pushState() 需要三个参数:</span><br><span class="line"><span class="number">1</span>、一个状态对象,</span><br><span class="line"><span class="number">2</span>、一个标题 (目前被忽略), 、</span><br><span class="line"><span class="number">3</span>、一个URL(可选的) 必须和当前页面同源,为空则为当前页面url.另外如果是相对地址则是相对于当前url处理。</span><br><span class="line">例子：</span><br><span class="line">var <span class="keyword">state</span>Obj = &#123; foo: <span class="string">"bar"</span> &#125;;</span><br><span class="line">history.pushState(<span class="keyword">state</span>Obj, <span class="string">"page 2"</span>, <span class="string">"bar.html"</span>);</span><br></pre></td></tr></table></figure></p><p>2、History.replaceState()：按指定的数据，名称和URL(如果提供该参数)，更新历史栈上最新的入口。这个数据被DOM进行了不透明处理。你可以指定任何可以被序列化的js对象。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、history.replaceState()的使用与 history.pushState() 非常相似，区别在于 replaceState() 是修改了当前的历史记录项而不是新建一个。 注意这并不会阻止其在全局浏览器历史记录中创建一个新的历史记录项。</span><br><span class="line"><span class="number">2</span>、replaceState() 的使用场景在于为了响应用户操作，你想要更新状态对象<span class="keyword">state</span>或者当前历史记录的URL。</span><br><span class="line"><span class="number">3</span>、history.replaceState(<span class="keyword">state</span>Obj, <span class="string">"page 3"</span>, <span class="string">"bar2.html"</span>);</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;history对象和HTML5-History-API&quot;&gt;&lt;a href=&quot;#history对象和HTML5-History-API&quot; class=&quot;headerlink&quot; title=&quot;history对象和HTML5 History API&quot;&gt;&lt;/a&gt;histo
+      
+    
+    </summary>
+    
+      <category term="html5" scheme="https://jiaopianjun.cc/categories/html5/"/>
+    
+    
+      <category term="history" scheme="https://jiaopianjun.cc/tags/history/"/>
+    
+  </entry>
   
   <entry>
     <title>前端跨域方法总结</title>
@@ -394,9 +419,9 @@
     
       <category term="日记" scheme="https://jiaopianjun.cc/tags/%E6%97%A5%E8%AE%B0/"/>
     
-      <category term="七夕" scheme="https://jiaopianjun.cc/tags/%E4%B8%83%E5%A4%95/"/>
-    
       <category term="2018" scheme="https://jiaopianjun.cc/tags/2018/"/>
+    
+      <category term="七夕" scheme="https://jiaopianjun.cc/tags/%E4%B8%83%E5%A4%95/"/>
     
   </entry>
   
@@ -515,29 +540,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>如何激活Windows10</title>
-    <link href="https://jiaopianjun.cc/2018/08/11/%E5%A6%82%E4%BD%95%E6%BF%80%E6%B4%BBWindows10.html"/>
-    <id>https://jiaopianjun.cc/2018/08/11/如何激活Windows10.html</id>
-    <published>2018-08-11T01:08:23.000Z</published>
-    <updated>2018-08-11T01:11:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.首先右击桌面左下角的“Windows”按钮（即开始按钮），选择点击“命令提示符（管理员）”。</p><p>2.弹出窗口后输入命令：slmgr.vbs /upk，按回车，卸载原来的产品激活，即提示“已成功卸载了产品密钥”。</p><a id="more"></a><p>3.继续我们输入如下命令：slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX（此为版本对应的密钥，自己查看并按上面对应选择），接着回车键后弹出“成功的安装了产品密钥”。</p><p>4.继续以下命令：slmgr /skms zh.us.to，回车弹出“密钥管理服务计算机名成功的设置为zh.us.to”的提示</p><p>5.当再输入以下命令时：slmgr /ato，回车键后将弹出“成功的激活了产品”的提示窗口。</p><p>6.以上步骤即激活了win10系统了，如果需要查看一下此密钥的激活天数，可以输入以下命令：slmgr /xpr，回车键后，将弹出窗口，提示”批量激活的过期时间”。当此激活操作过期后，我们只需要重新激活一次，即可再享受180天激活机会。</p><p>密钥：</p><p>Win10正式专业版密钥（32位和64位均可正常使用）：</p><p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p><p>Win10正式企业版密钥（32位和64位均可正常使用）：</p><p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p><p>其他密钥，也可用：</p><p>专业版：VK7JG-NPHTM-C97JM-9MPGT-3V66T</p><p>企业版：XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</p><p>教育版：YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY</p><p>专业版N：2B87N-8KFHP-DKV6R-Y2C8J-PKCKT</p><p>企业版N：WGGHN-J84D6-QYCPR-T7PJ7-X766F</p><p>教育版N：84NGF-MHBT6-FXBX8-QWJK7-DRR8H</p><p>企业版S：FWN7H-PF93Q-4GGP8-M8RF3-MDWWW</p><p>单语言版：BT79Q-G7N6G-PGBYW-4YWX6-6F4BT</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1.首先右击桌面左下角的“Windows”按钮（即开始按钮），选择点击“命令提示符（管理员）”。&lt;/p&gt;
-&lt;p&gt;2.弹出窗口后输入命令：slmgr.vbs /upk，按回车，卸载原来的产品激活，即提示“已成功卸载了产品密钥”。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Coding" scheme="https://jiaopianjun.cc/categories/Coding/"/>
-    
-    
-      <category term="其他" scheme="https://jiaopianjun.cc/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
